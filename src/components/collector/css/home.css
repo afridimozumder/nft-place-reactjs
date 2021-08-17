@@ -1,0 +1,20 @@
+
+
+  .grid {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 8%;
+    margin-right: 8%;
+
+  }
+  
+  div > div {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  .body{
+    background-image: linear-gradient(to bottom, #407587, #427280, #456f79, #476b72, #4a686c, #4e7075, #51797d, #558186, #5998a1, #5cafbd, #5ec7db, #5fdffb);
+  }
+  
