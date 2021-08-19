@@ -9,7 +9,7 @@ const NftList = ({itemList})=>{
         <div class='body'>
 
         <Navbar/>
-        <div class="grid">
+        <div class="grid-cont">
                 {
                     itemList.map((u)=>{
                         return <Nft key={u.id} {...u}/>

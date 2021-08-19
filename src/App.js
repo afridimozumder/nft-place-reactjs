@@ -5,6 +5,9 @@ import { useFetch } from './components/collector/useFetch';
 import UserList from './components/UserList';
 import NftList from './components/collector/NftList';
 import NftDetails from './components/collector/NftDetails';
+import ProofAuth from './components/collector/proof';
+import SignIn from './common/SignIn';
+import Dashboard from './components/collector/Dashboard';
 
 function App() {
 
@@ -26,9 +29,9 @@ function App() {
           <h1>_Welcome Home!</h1>
         </Route>
 
-      <Route path='/info'>
+      <Route path='/login'>
           <div>
-            <UserList userList={userList}/>
+            <SignIn/>
           </div>
       </Route>
       <Route path='/collectorHome'>
@@ -42,12 +45,24 @@ function App() {
             <NftDetails itemList={ItemList}/>
           </div>
       </Route>
+
+      <Route path='/proof/:id'>
+          <div>
+            <ProofAuth itemList={ItemList}/>
+          </div>
+      </Route>
       
       <Route path='/collector-dashboard'>
           <div>
-            <h2>DashBoard</h2>
+            <Dashboard/>
           </div>
       </Route>
+      <Route path='/collectors-collection'>
+          <div>
+            <h2>MY Collection PAge</h2>
+          </div>
+      </Route>
+
       <Route path='/collector-profile'>
           <div>
             <h2>Collector Profile</h2>

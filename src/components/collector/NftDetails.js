@@ -47,7 +47,8 @@ const NftDetails = ({itemList}) =>{
 
 
     return(
-        <div class='body'>
+      <>
+        <body>
             <div class="grid-container">
                 <div class="Navbar"><Navbar/></div>
                 <div class="left"></div>
@@ -69,7 +70,7 @@ const NftDetails = ({itemList}) =>{
                         Creator : {nft.creator}<br/>
                         Edition : {nft.edition}<br/><br/>
 
-                        <Button color="secondary" href={`/proof/${eid}`}>See Proof of Authenticity</Button>
+                        <Button color="secondary" href={`/proof/${eid}`}>See Proof of Authenticity{eid}</Button>
 {/*                         <Button variant="secondary" gutterBottom>
                             <Link to={`/proof/${eid}`}>See Proof of Authenticity</Link><br/>
                         </Button> */}
@@ -83,7 +84,7 @@ const NftDetails = ({itemList}) =>{
                         <BasicTextFields/>
                         <div className={classes.button}>
                             <Button variant="outlined" color="secondary" href={`/purchase/${eid}`}>
-                                Submit
+                              Submit
                             </Button>
                         </div>
                         
@@ -94,7 +95,8 @@ const NftDetails = ({itemList}) =>{
                 <div class="rignt"></div>            
                 <div class="footer">Footer</div>
             </div>
-        </div>
+            </body>
+        </>
     );
 }
 

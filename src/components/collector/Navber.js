@@ -40,7 +40,7 @@ export default function Navbar() {
           <Button color="inherit" onClick={() => { history.push('/collector-dashboard'); }}>DashBoard</Button>
           <Button color="inherit" onClick={() => { history.push('/collector-wallet'); }}>Wallet</Button>
           <Button color="inherit" onClick={() => { history.push('/collector-profile'); }}>Profile</Button>
-          <Button color="inherit" onClick={() => { history.push('/logout'); }}>logout</Button>
+          <Button color="inherit" onClick={() => { history.push('/login'); }}>logout</Button>
           
         </Toolbar>
       </AppBar>
