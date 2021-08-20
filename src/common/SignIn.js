@@ -16,6 +16,7 @@ import Container from "@material-ui/core/Container";
 import Nav from "./Nav";
 import swal from "sweetalert";
 import { useHistory } from "react-router-dom";
+/* import state from "sweetalert/typings/modules/state"; */
 
 function Copyright() {
   return (
@@ -74,10 +75,13 @@ export default function SignIn() {
         sessionStorage.setItem("usertype", result["usertype"]);
         sessionStorage.setItem("phone", result["phone"]);
         sessionStorage.setItem("profileImage", result["profileImage"]);
-        console.log(sessionStorage.getItem("phone"));
+        sessionStorage.setItem("dob", result["dob"]);
+        sessionStorage.setItem("address", result["address"]);
+        sessionStorage.setItem("gender", result["gender"]);
+        console.log(sessionStorage.getItem("address"));
         setAuth("");
         if (result["usertype"] == "collector") {
-          history.push("/collectorHome");
+          history.push({pathname:'/collectorHome', state:result["id"]});
           swal({
             title: "Welcome " + result["name"],
             icon: "success",

@@ -8,6 +8,8 @@ import NftDetails from './components/collector/NftDetails';
 import ProofAuth from './components/collector/proof';
 import SignIn from './common/SignIn';
 import Dashboard from './components/collector/Dashboard';
+import Profile from './components/collector/profile';
+import ProfileUpdate from './components/collector/profileUpdate';
 
 function App() {
 
@@ -18,10 +20,6 @@ function App() {
   const url = `http://localhost:8000/api/collector/home`;
   const [ItemList, setItemList] = useState([]);
   useFetch(url, setItemList);
-
-/*   const url = `http://localhost:8000/api/details/${id}`;
-  const [nftDetail, setnftDetail] = useState([]);
-  useFetch(url, setnftDetail); */
 
   return (
     <Router>
@@ -65,9 +63,15 @@ function App() {
 
       <Route path='/collector-profile'>
           <div>
-            <h2>Collector Profile</h2>
+            <Profile/>
           </div>
       </Route>
+      <Route path='/collector-profile-update'>
+          <div>
+            <ProfileUpdate/>
+          </div>
+      </Route>
+
       <Route path='/collector-wallet'>
           <div>
             <h2>Wallet</h2>

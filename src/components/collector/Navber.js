@@ -29,7 +29,7 @@ export default function Navbar() {
     <div className={classes.root}>
       <AppBar position="static" color='primary'>
         <Toolbar>
-          <IconButton>
+          <IconButton onClick={() => { history.push('/collectorHome'); }}>
             <HomeRoundedIcon/>
           </IconButton>
 
